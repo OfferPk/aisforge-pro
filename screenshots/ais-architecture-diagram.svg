@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650">
+  <defs>
+    <linearGradient id="bgA" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050d1a"/>
+      <stop offset="100%" stop-color="#0e1e38"/>
+    </linearGradient>
+    <linearGradient id="vhfG" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="ecdisG" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#022c22"/>
+    </linearGradient>
+    <linearGradient id="streamG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="50%" stop-color="#00ff66"/>
+      <stop offset="100%" stop-color="#b388ff"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1100" height="650" fill="url(#bgA)"/>
+
+  <!-- Title -->
+  <text x="550" y="45" font-family="-apple-system, sans-serif" font-size="22" font-weight="800" fill="#f0f6fc" text-anchor="middle">ITU-R M.1371 Maritime AIS &amp; NMEA 0183/2000 Navigation Architecture</text>
+  <text x="550" y="70" font-family="monospace" font-size="13" fill="#8b9eb8" text-anchor="middle">VHF Radio Data Links, ECDIS Integration &amp; IMO SOLAS Threat Mitigation</text>
+
+  <!-- Threat Area (Unauthenticated AIS Injection) -->
+  <rect x="50" y="100" width="1000" height="150" rx="8" fill="#450a0a" fill-opacity="0.3" stroke="#ef4444" stroke-width="1" stroke-dasharray="6 4"/>
+  <text x="70" y="125" font-family="-apple-system, sans-serif" font-size="13" font-weight="bold" fill="#f87171">VULNERABILITY: UNENCRYPTED VHF AIS SPOOFING &amp; PHANTOM GHOST VESSELS</text>
+
+  <!-- Rogue SDR -->
+  <rect x="70" y="145" width="220" height="85" rx="6" fill="#0f213d" stroke="#1c3866" stroke-width="1"/>
+  <text x="180" y="175" font-family="-apple-system, sans-serif" font-size="13" font-weight="bold" fill="#f0f6fc" text-anchor="middle">Rogue SDR Transceiver</text>
+  <text x="180" y="195" font-family="monospace" font-size="11" fill="#f87171" text-anchor="middle">Spoofed Coordinates / SOG</text>
+
+  <!-- Wire -->
+  <line x1="290" y1="187" x2="800" y2="187" stroke="#ef4444" stroke-width="3"/>
+  <text x="490" y="175" font-family="monospace" font-size="11" fill="#fca5a5" text-anchor="middle">Unauthenticated VHF Broadcast (161.975 / 162.025 MHz)</text>
+
+  <!-- Threat Box -->
+  <rect x="470" y="180" width="180" height="50" rx="6" fill="#7f1d1d" stroke="#f87171" stroke-width="1"/>
+  <text x="560" y="200" font-family="-apple-system, sans-serif" font-size="11" font-weight="bold" fill="#fee2e2" text-anchor="middle">⚠️ Ghost Vessel Spoof</text>
+  <text x="560" y="218" font-family="monospace" font-size="10" fill="#fecaca" text-anchor="middle">False Collision Alert</text>
+
+  <!-- Legacy ECDIS -->
+  <rect x="800" y="145" width="220" height="85" rx="6" fill="#0f213d" stroke="#1c3866" stroke-width="1"/>
+  <text x="910" y="175" font-family="-apple-system, sans-serif" font-size="13" font-weight="bold" fill="#f0f6fc" text-anchor="middle">Vulnerable ECDIS Display</text>
+  <text x="910" y="195" font-family="monospace" font-size="11" fill="#f87171" text-anchor="middle">Blind Trust on NMEA Feed</text>
+
+  <!-- Secure Architecture Area -->
+  <rect x="50" y="280" width="1000" height="330" rx="8" fill="#022c22" fill-opacity="0.3" stroke="#00ff66" stroke-width="1"/>
+  <text x="70" y="310" font-family="-apple-system, sans-serif" font-size="13" font-weight="bold" fill="#00ff66">HIGH-ASSURANCE SHIPBOARD BRIDGE ARCHITECTURE (IMO MSC.428 &amp; IACS UR E26)</text>
+
+  <!-- Transponder -->
+  <rect x="70" y="335" width="260" height="245" rx="8" fill="url(#vhfG)" stroke="#00f0ff" stroke-width="2"/>
+  <text x="200" y="370" font-family="-apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Class A AIS Transponder</text>
+  <text x="200" y="390" font-family="monospace" font-size="11" fill="#00f0ff" text-anchor="middle">IMO Certified Unit</text>
+  
+  <rect x="90" y="410" width="220" height="40" rx="4" fill="#050d1a" stroke="#1c3866" stroke-width="1"/>
+  <text x="200" y="435" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">6-Bit ASCII Armoring Engine</text>
+
+  <rect x="90" y="460" width="220" height="40" rx="4" fill="#050d1a" stroke="#1c3866" stroke-width="1"/>
+  <text x="200" y="485" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">Type 1/2/3/5 Generator</text>
+
+  <rect x="90" y="510" width="220" height="45" rx="4" fill="#050d1a" stroke="#1c3866" stroke-width="1"/>
+  <text x="200" y="530" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">Strict NMEA XOR Checksum</text>
+  <text x="200" y="545" font-family="monospace" font-size="10" fill="#8b9eb8" text-anchor="middle">RAIM GPS Integrity</text>
+
+  <!-- Navigation Bus -->
+  <line x1="330" y1="455" x2="770" y2="455" stroke="url(#streamG)" stroke-width="5"/>
+  <text x="550" y="435" font-family="-apple-system, sans-serif" font-size="13" font-weight="bold" fill="#00f0ff" text-anchor="middle">IEC 61162-450 Ethernet &amp; N2K CAN Bus</text>
+  <text x="550" y="485" font-family="monospace" font-size="11" fill="#00ff66" text-anchor="middle">UDP 10110 Multicast + PGN 129038 CAN Frames</text>
+  <text x="550" y="505" font-family="monospace" font-size="10" fill="#8b9eb8" text-anchor="middle">Suricata DPI Maritime Threat Signature Inspection</text>
+
+  <!-- ECDIS / VTS -->
+  <rect x="770" y="335" width="260" height="245" rx="8" fill="url(#ecdisG)" stroke="#00ff66" stroke-width="2"/>
+  <text x="900" y="370" font-family="-apple-system, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Hardened ECDIS / VTS</text>
+  <text x="900" y="390" font-family="monospace" font-size="11" fill="#00ff66" text-anchor="middle">Primary Navigation Hub</text>
+
+  <rect x="790" y="410" width="220" height="40" rx="4" fill="#050d1a" stroke="#1c3866" stroke-width="1"/>
+  <text x="900" y="435" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">Kinematic Velocity Verifier</text>
+
+  <rect x="790" y="460" width="220" height="40" rx="4" fill="#050d1a" stroke="#1c3866" stroke-width="1"/>
+  <text x="900" y="485" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">Ghost Vessel Trajectory Correlator</text>
+
+  <rect x="790" y="510" width="220" height="45" rx="4" fill="#050d1a" stroke="#1c3866" stroke-width="1"/>
+  <text x="900" y="530" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">ARPA Primary Radar Cross-Check</text>
+  <text x="900" y="545" font-family="monospace" font-size="10" fill="#8b9eb8" text-anchor="middle">Dedicated VLAN 500 Firewall</text>
+</svg>
